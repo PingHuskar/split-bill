@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.container input[type=number] {
+  text-align: center;
+}
+.container table {
+  border: 2px solid coral;
+  width: 60%;
+}
+.container table thead tr th {
+  background: #000;
+  color: #fff;
+}
+.container table tbody tr td {
+  border: 2px solid coral;
+  text-align: center;
+  font-weight: bold;
+}
+.container table tbody tr td:last-child {
+  text-align: right;
+}
+.container table tfoot tr:first-child td:last-child::after {
+  content: "%";
+}
+.container table tfoot tr td {
+  border: 2px solid coral;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+.container table tfoot tr td:last-child, .container table tfoot tr td#total {
+  background: transparent;
+  color: #000;
+  text-align: right;
+}
+.container table tfoot tr td:last-child::after, .container table tfoot tr td#total::after {
+  content: ".-";
+}
+.container div button {
+  padding: 5px 10px;
+}
+.container div button:first-child {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+.container div button:last-child {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}/*# sourceMappingURL=style.css.map */

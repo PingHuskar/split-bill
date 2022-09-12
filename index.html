@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Split</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 contenteditable>Lorem ipsum dolor sit amet.</h1>
+        <!-- value="1029.25" -->
+        <input type="number" name="ticketTotal" id="ticketTotal" value="962" onchange="main()">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Amt</th>
+                    <th>Vat</th>
+                    <th>Amt+Vat</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>Vat</td>
+                    <td></td>
+                    <td></td>
+                    <td contenteditable id="vat" oninput="main()"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Total</td>
+                    <td id="total">?</td>
+                    <td>Left Amt</td>
+                    <td id="leftAmt">?</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="">
+            <button onclick="addItem()" id="addItem">Add Item</button>    
+            <button onclick="removeItem()" id="removeItem">Remove Item</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
