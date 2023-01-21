@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 body {
@@ -12,6 +16,8 @@ body {
   align-items: center;
   position: relative;
   font-family: sans-serif;
+  background: #333;
+  color: #ccc;
 }
 
 .container {
@@ -26,22 +32,57 @@ body {
 }
 .container input[type=number] {
   text-align: center;
+  width: 30%;
+  padding: 10px 0;
+  font-size: 2em;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.container input[type=number]::-moz-selection {
+  background: cadetblue;
+}
+.container input[type=number]::selection {
+  background: cadetblue;
 }
 .container table {
   border: 2px solid coral;
-  width: 60%;
+  width: 70%;
 }
 .container table thead tr th {
-  background: #000;
-  color: #fff;
+  background: #555;
+  color: #ccc;
+  padding: 10px 0;
+}
+.container table thead tr th:last-child {
+  width: 100px;
 }
 .container table tbody tr td {
   border: 2px solid coral;
   text-align: center;
   font-weight: bold;
+  min-width: 100px;
+}
+.container table tbody tr td:first-child {
+  width: 5%;
 }
 .container table tbody tr td:last-child {
-  text-align: right;
+  text-align: center;
+  width: 300px;
+}
+.container table tbody tr td:nth-child(2) {
+  width: 30%;
+}
+.container table tbody tr td:nth-child(3) {
+  width: 20%;
+}
+.container table tbody tr td:nth-child(4) {
+  width: 20%;
+}
+.container table tbody tr td:nth-child(5) {
+  width: 20%;
+}
+.container table tfoot tr:first-child td:last-child {
+  text-align: center;
 }
 .container table tfoot tr:first-child td:last-child::after {
   content: "%";
@@ -49,16 +90,27 @@ body {
 .container table tfoot tr td {
   border: 2px solid coral;
   background: #333;
-  color: #fff;
+  color: #ccc;
   font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
 }
 .container table tfoot tr td:last-child, .container table tfoot tr td#total {
   background: transparent;
-  color: #000;
+  color: #ccc;
   text-align: right;
 }
 .container table tfoot tr td:last-child::after, .container table tfoot tr td#total::after {
   content: ".-";
+}
+.container table tfoot tr td#vat {
+  text-align: center;
+}
+.container table tfoot tr td#vat::after {
+  content: "%";
+}
+.container table tfoot tr td#total, .container table tfoot tr td#leftAmt {
+  text-align: center;
 }
 .container div button {
   padding: 5px 10px;

@@ -18,25 +18,26 @@
                     <th>#</th>
                     <th>Name</th>
                     <th>Amt</th>
+                    <th>Service Charge</th>
                     <th>Vat</th>
-                    <th>Amt+Vat</th>
+                    <th>Subtotal</th>
                 </tr>
             </thead>
             <tbody id="tableBody">
             </tbody>
             <tfoot>
                 <tr>
-                    <td></td>
-                    <td>Vat</td>
-                    <td></td>
-                    <td></td>
-                    <td contenteditable id="vat" oninput="main()"></td>
+                    <td colspan="5">Service Charge</td>
+                    <td contenteditable id="servicecharge" oninput="main()">0</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>Total</td>
+                    <td colspan="5">Vat</td>
+                    <td contenteditable id="vat" oninput="main()">7</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Total</td>
                     <td id="total">?</td>
-                    <td>Left Amt</td>
+                    <td colspan="2">Left Amt</td>
                     <td id="leftAmt">?</td>
                 </tr>
             </tfoot>
