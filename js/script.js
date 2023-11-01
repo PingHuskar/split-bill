@@ -13,7 +13,7 @@ const main = () => {
     if (!(numRegex.test(servicecharge.innerText)) || parseInt(servicecharge.innerText) > 10) {
         servicecharge.innerText = 10
     }
-    const ticketTotal = document.getElementById('ticketTotal').value * (100+ parseFloat(vat.innerText)) / 100
+    const ticketTotal = (document.getElementById('ticketTotal').value * (100 + parseInt(servicecharge.innerText))/100 ) * (100+ parseFloat(vat.innerText)) / 100
     const roundTicketTotal = (Math.round(ticketTotal * 4) / 4).toFixed(2);
 
     for (var i = 0; i< beforeVat.length; i++) {
@@ -22,7 +22,7 @@ const main = () => {
         }
         servicechargepaid[i].innerText = (parseFloat(beforeVat[i].innerText) * (parseFloat(servicecharge.innerText)) / 100).toFixed(2)
         vatpaid[i].innerText = ((parseFloat(beforeVat[i].innerText)+parseFloat(servicechargepaid[i].innerText)) * parseFloat(vat.innerText) / 100).toFixed(2)
-        fullpaid[i].innerText = `${parseFloat(vatpaid[i].innerText) + parseFloat(beforeVat[i].innerText)}`
+        fullpaid[i].innerText = `${(parseFloat(servicechargepaid[i].innerText) + parseFloat(vatpaid[i].innerText) + parseFloat(beforeVat[i].innerText)).toFixed(2)}`
     }
 
     var paidAmt = 0
